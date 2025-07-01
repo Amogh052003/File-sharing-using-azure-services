@@ -1,0 +1,31 @@
+name: Deploy Azure Functions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          cd functions
+          pip install -r requirements.txt
+
+      - name: Deploy to Azure Function App
+        uses: azure/functions-action@v1
+        with:
+          app-name: filesharefrontendapp
+          package: ./functions
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
