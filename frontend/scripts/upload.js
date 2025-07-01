@@ -11,7 +11,7 @@ async function uploadFile() {
 
   status.innerText = "Uploading...";
 
-  const functionUrl = `securefilesharingfunc-e5ehabccatg0bmbm.centralindia-01.azurewebsites.net/api/generate_sas_upload?filename=${encodeURIComponent(file.name)}`;
+  const functionUrl = `https://securefilesharingfunc-e5ehabccatg0bmbm.centralindia-01.azurewebsites.net/api/generate_sas_upload?filename=${encodeURIComponent(file.name)}`;
 
   try {
     // Get SAS upload URL from Azure Function
