@@ -1,0 +1,45 @@
+# Node.js (if you use tools like npm/yarn for frontend)
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+.env
+.venv/
+.env.*
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Azure Functions build artifacts
+local.settings.json
+.python_packages/
+funcpack/
+*.pyc
+
+# GitHub Actions artifacts
+*.zip
+*.tar.gz
+
+# IDEs
+.idea/
+*.swp
+
+# Temporary files
+*.bak
+*.tmp
+
+# Frontend dev tools (optional)
+*.map
+coverage/
+.cache/
